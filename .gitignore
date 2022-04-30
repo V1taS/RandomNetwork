@@ -35,7 +35,6 @@ playground.xcworkspace
 Packages/
 Package.pins
 Package.resolved
-*.xcodeproj
 .swiftpm
 
 .build/
@@ -65,12 +64,4 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
-RandomUIKit.xcodeproj/project.pbxproj
-RandomUIKit.xcodeproj/RandomUIKitTests_Info.plist
-RandomUIKit.xcodeproj/xcshareddata/xcschemes/RandomUIKit.xcscheme
-RandomUIKit.xcodeproj/xcshareddata/xcschemes/RandomUIKit-Package.xcscheme
-RandomUIKit.xcodeproj/project.xcworkspace/contents.xcworkspacedata
-RandomUIKit.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings
-RandomUIKit.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
 .DS_Store
-RandomUIKitExample/RandomUIKitExample/Assets.xcassets/AppIcon.appiconset/Contents.json
