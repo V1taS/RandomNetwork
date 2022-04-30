@@ -11,6 +11,8 @@ import Foundation
 import SystemConfiguration
 
 protocol NetworkReachability {
+    
+    /// Доступность интернета
     var isReachable: Bool { get }
 }
 
@@ -212,32 +214,29 @@ public final class DefaultNetworkReachability {
 
 // MARK: - Equatable
 
-extension DefaultNetworkReachability.NetworkReachabilityStatus: Equatable {}
-
-/// Возвращает, равны ли два значения состояния доступности сети.
-///
-/// - parameter lhs: Левое значение для сравнения.
-/// - parameter rhs: Значение правой стороны для сравнения.
-///
-/// - returns: `true`, если два значения равны, `false` в противном случае.
-public func ==(
-    lhs: DefaultNetworkReachability.NetworkReachabilityStatus,
-    rhs: DefaultNetworkReachability.NetworkReachabilityStatus)
--> Bool
-{
-    switch (lhs, rhs) {
-    case (.unknown, .unknown):
-        return true
-    case (.notReachable, .notReachable):
-        return true
-    case let (.reachable(lhsConnectionType), .reachable(rhsConnectionType)):
-        return lhsConnectionType == rhsConnectionType
-    default:
-        return false
+extension DefaultNetworkReachability.NetworkReachabilityStatus: Equatable {
+    
+    /// Возвращает, равны ли два значения состояния доступности сети.
+    ///
+    /// - parameter lhs: Левое значение для сравнения.
+    /// - parameter rhs: Значение правой стороны для сравнения.
+    ///
+    /// - returns: `true`, если два значения равны, `false` в противном случае.
+    public static func ==(lhs: DefaultNetworkReachability.NetworkReachabilityStatus,
+                          rhs: DefaultNetworkReachability.NetworkReachabilityStatus) -> Bool {
+        switch (lhs, rhs) {
+        case (.unknown, .unknown):
+            return true
+        case (.notReachable, .notReachable):
+            return true
+        case let (.reachable(lhsConnectionType), .reachable(rhsConnectionType)):
+            return lhsConnectionType == rhsConnectionType
+        default:
+            return false
+        }
     }
 }
 
-extension DefaultNetworkReachability: NetworkReachability {
-}
+extension DefaultNetworkReachability: NetworkReachability { }
 
 #endif
