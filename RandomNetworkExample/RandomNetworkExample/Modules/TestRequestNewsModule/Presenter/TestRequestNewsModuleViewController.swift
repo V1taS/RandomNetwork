@@ -66,6 +66,9 @@ final class TestRequestNewsModuleViewController: TestRequestNewsModuleModule {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        interactor.getContent()
+        moduleView.startLoader()
+        title = Appearance().title
     }
 }
 
@@ -78,7 +81,10 @@ extension TestRequestNewsModuleViewController: TestRequestNewsModuleViewOutput {
 // MARK: - TestRequestNewsModuleInteractorOutput
 
 extension TestRequestNewsModuleViewController: TestRequestNewsModuleInteractorOutput {
-    
+    func didRecive(news: TestRequestNewsModel) {
+        moduleView.configureList(news: news)
+        moduleView.stopLoader()
+    }
 }
 
 // MARK: - TestRequestNewsModuleFactoryOutput
@@ -91,6 +97,6 @@ extension TestRequestNewsModuleViewController: TestRequestNewsModuleFactoryOutpu
 
 private extension TestRequestNewsModuleViewController {
     struct Appearance {
-        
+        let title = "RandomNetwork"
     }
 }

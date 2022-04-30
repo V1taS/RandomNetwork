@@ -6,15 +6,17 @@
 //
 
 import UIKit
+import RandomNetwork
 
 /// Сборщик `TestRequestNewsModule`
 final class TestRequestNewsModuleAssembly {
     
     /// Собирает модуль `TestRequestNewsModule`
+    /// - Parameter networkRequestPerformer: Сетевой слой
     /// - Returns: Cобранный модуль `TestRequestNewsModule`
-    func createModule() -> TestRequestNewsModuleModule {
+    func createModule(networkRequestPerformer: NetworkRequestPerformer) -> TestRequestNewsModuleModule {
         
-        let interactor = TestRequestNewsModuleInteractor()
+        let interactor = TestRequestNewsModuleInteractor(networkRequestPerformer: networkRequestPerformer)
         let view = TestRequestNewsModuleView()
         let factory = TestRequestNewsModuleFactory()
         

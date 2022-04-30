@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RandomNetwork
 
 final class TestRequestNewsCoordinator: Coordinator {
     
@@ -13,19 +14,24 @@ final class TestRequestNewsCoordinator: Coordinator {
     
     private let navigationController: UINavigationController
     private var testRequestNewsModule: TestRequestNewsModuleModule?
+    private let networkRequestPerformer: NetworkRequestPerformer
     
     // MARK: - Initialization
     
     /// - Parameters:
     ///   - navigationController: UINavigationController
-    init(_ navigationController: UINavigationController) {
+    ///   - networkRequestPerformer: Сетевой слой
+    init(_ navigationController: UINavigationController,
+         _ networkRequestPerformer: NetworkRequestPerformer) {
         self.navigationController = navigationController
+        self.networkRequestPerformer = networkRequestPerformer
     }
     
     // MARK: - Internal func
     
     func start() {
-        let testRequestNewsModule = TestRequestNewsModuleAssembly().createModule()
+        let moduleAssembly = TestRequestNewsModuleAssembly()
+        let testRequestNewsModule = moduleAssembly.createModule(networkRequestPerformer: networkRequestPerformer)
         self.testRequestNewsModule = testRequestNewsModule
         navigationController.pushViewController(testRequestNewsModule, animated: true)
     }
