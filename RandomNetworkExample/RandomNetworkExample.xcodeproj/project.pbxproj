@@ -19,6 +19,10 @@
 		1B92E09A281D524000398966 /* TestRequestNewsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92E097281D524000398966 /* TestRequestNewsCoordinator.swift */; };
 		1B92E09B281D524000398966 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92E098281D524000398966 /* RootCoordinator.swift */; };
 		1B92E09C281D524000398966 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92E099281D524000398966 /* Coordinator.swift */; };
+		1B92E0A6281D8B4A00398966 /* RandomNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 1B92E0A5281D8B4A00398966 /* RandomNetwork */; };
+		1B92E0E7281D905200398966 /* TestRequestNewsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92E0E6281D905200398966 /* TestRequestNewsRequest.swift */; };
+		1B92E0E9281D908200398966 /* TestRequestNewsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92E0E8281D908200398966 /* TestRequestNewsDTO.swift */; };
+		1B92E0EC281D997400398966 /* TestRequestNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B92E0EB281D997400398966 /* TestRequestNewsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,9 @@
 		1B92E097281D524000398966 /* TestRequestNewsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRequestNewsCoordinator.swift; sourceTree = "<group>"; };
 		1B92E098281D524000398966 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		1B92E099281D524000398966 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		1B92E0E6281D905200398966 /* TestRequestNewsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRequestNewsRequest.swift; sourceTree = "<group>"; };
+		1B92E0E8281D908200398966 /* TestRequestNewsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRequestNewsDTO.swift; sourceTree = "<group>"; };
+		1B92E0EB281D997400398966 /* TestRequestNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRequestNewsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B92E0A6281D8B4A00398966 /* RandomNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,7 @@
 				1B92E082281D4A4B00398966 /* Packages */,
 				1B92E069281D487300398966 /* RandomNetworkExample */,
 				1B92E068281D487300398966 /* Products */,
+				1B92E0A4281D8B4A00398966 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +79,7 @@
 		1B92E069281D487300398966 /* RandomNetworkExample */ = {
 			isa = PBXGroup;
 			children = (
+				1B92E0E2281D8FE000398966 /* ApplicationServices */,
 				1B92E096281D522900398966 /* Navigation */,
 				1B92E085281D516D00398966 /* Modules */,
 				1B92E084281D512400398966 /* System */,
@@ -108,6 +118,7 @@
 		1B92E086281D517C00398966 /* TestRequestNewsModule */ = {
 			isa = PBXGroup;
 			children = (
+				1B92E0EA281D995600398966 /* Models */,
 				1B92E095281D520100398966 /* Assembly */,
 				1B92E094281D51E800398966 /* Factory */,
 				1B92E093281D51DC00398966 /* Presenter */,
@@ -167,6 +178,54 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
+		1B92E0A4281D8B4A00398966 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1B92E0E2281D8FE000398966 /* ApplicationServices */ = {
+			isa = PBXGroup;
+			children = (
+				1B92E0E3281D8FEA00398966 /* Networking */,
+			);
+			path = ApplicationServices;
+			sourceTree = "<group>";
+		};
+		1B92E0E3281D8FEA00398966 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1B92E0E4281D8FF500398966 /* APICalls */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1B92E0E4281D8FF500398966 /* APICalls */ = {
+			isa = PBXGroup;
+			children = (
+				1B92E0E5281D902A00398966 /* TestRequestNewsAPICall */,
+			);
+			path = APICalls;
+			sourceTree = "<group>";
+		};
+		1B92E0E5281D902A00398966 /* TestRequestNewsAPICall */ = {
+			isa = PBXGroup;
+			children = (
+				1B92E0E6281D905200398966 /* TestRequestNewsRequest.swift */,
+				1B92E0E8281D908200398966 /* TestRequestNewsDTO.swift */,
+			);
+			path = TestRequestNewsAPICall;
+			sourceTree = "<group>";
+		};
+		1B92E0EA281D995600398966 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1B92E0EB281D997400398966 /* TestRequestNewsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +242,9 @@
 			dependencies = (
 			);
 			name = RandomNetworkExample;
+			packageProductDependencies = (
+				1B92E0A5281D8B4A00398966 /* RandomNetwork */,
+			);
 			productName = RandomNetworkExample;
 			productReference = 1B92E067281D487300398966 /* RandomNetworkExample.app */;
 			productType = "com.apple.product-type.application";
@@ -237,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B92E0EC281D997400398966 /* TestRequestNewsModel.swift in Sources */,
 				1B92E08E281D51C100398966 /* TestRequestNewsModuleAssembly.swift in Sources */,
 				1B92E06B281D487300398966 /* AppDelegate.swift in Sources */,
 				1B92E09C281D524000398966 /* Coordinator.swift in Sources */,
@@ -245,6 +308,8 @@
 				1B92E08C281D51C100398966 /* TestRequestNewsModuleFactory.swift in Sources */,
 				1B92E08D281D51C100398966 /* TestRequestNewsModuleViewController.swift in Sources */,
 				1B92E090281D51C100398966 /* TestRequestNewsModuleView.swift in Sources */,
+				1B92E0E7281D905200398966 /* TestRequestNewsRequest.swift in Sources */,
+				1B92E0E9281D908200398966 /* TestRequestNewsDTO.swift in Sources */,
 				1B92E09B281D524000398966 /* RootCoordinator.swift in Sources */,
 				1B92E08F281D51C100398966 /* TestRequestNewsModuleInteractor.swift in Sources */,
 			);
@@ -456,6 +521,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B92E0A5281D8B4A00398966 /* RandomNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RandomNetwork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B92E05F281D487300398966 /* Project object */;
 }
