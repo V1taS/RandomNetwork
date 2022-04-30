@@ -65,3 +65,4 @@ fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
 .DS_Store
+RandomNetworkExample/RandomNetworkExample/Assets.xcassets/AppIcon.appiconset/Contents.json
