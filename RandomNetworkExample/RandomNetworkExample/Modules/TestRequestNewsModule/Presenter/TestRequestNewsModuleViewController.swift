@@ -25,8 +25,6 @@ typealias TestRequestNewsModuleModule = UIViewController & TestRequestNewsModule
 /// Презентер
 final class TestRequestNewsModuleViewController: TestRequestNewsModuleModule {
     
-    // MARK: - Public properties
-    
     // MARK: - Internal properties
     
     weak var moduleOutput: TestRequestNewsModuleModuleOutput?
