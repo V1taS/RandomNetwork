@@ -1,3 +1,3 @@
 # RandomNetwork
 
-A description of this package.
+Network библиотека для Random Pro!
