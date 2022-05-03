@@ -37,7 +37,7 @@ public final class URLSessionRequestPerformer {
 
 // MARK: - NetworkRequestPerformer
 
-public extension URLSessionRequestPerformer: NetworkRequestPerformer {
+extension URLSessionRequestPerformer: NetworkRequestPerformer {
     
     public func perform(_ request: NetworkRequest, completion: ((NetworkRequestResult) -> Void)?) {
         guard networkReachability?.isReachable ?? false else {
